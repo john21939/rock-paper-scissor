@@ -2,7 +2,7 @@ import random
 score = 0
 computer_score = 0
 #dawd
-#dsadssssss
+#dsadssssssd
 
 while True:
     choices = ["rock", "paper", "scissor"]
