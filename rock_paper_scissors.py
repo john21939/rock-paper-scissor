@@ -1,42 +1,57 @@
 import random
-#test
-
+score = 0
+computer_score = 0
+#dawd
+#dsadssssss
 
 while True:
     choices = ["rock", "paper", "scissor"]
+
+    player = None
     result = random.choice(choices)
 
+    while player not in choices:
+        player = input("rock, paper, scissor:").lower()
 
-    answer = input("Would you like to play?: (yes/no)")
-    if answer.lower() == "yes":
-        person_choice = input("rock,paper,scissor?: ").lower()
-    else:
-        print("BYE!")
 
-        quit()
-
-    if person_choice == result:
-        print(f"You:{person_choice}")
+    if player == result:
+        print(f"You:{player}")
         print(f"Computer:{result}")
         print("[TIE!]")
 
-    elif person_choice == "rock" and result == "scissor":
-        print(f"You:{person_choice}")
+    elif player == "rock" and result == "scissor":
+        print(f"You:{player}")
         print(f"Computer:{result}")
         print("[You win]")
-    elif person_choice == "scissor" and result == "paper":
-        print(f"You:{person_choice}")
+        score+=1
+    elif player == "scissor" and result == "paper":
+        print(f"You:{player}")
         print(f"Computer:{result}")
         print("[You win]")
-    elif person_choice == "paper" and result == "rock":
-        print(f"You:{person_choice}")
+        score+=1
+
+    elif player == "paper" and result == "rock":
+        print(f"You:{player}")
         print(f"Computer:{result}")
         print("[You win]")
+        score+=1
+
     else:
-        print(f"You:{person_choice}")
+        print(f"You:{player}")
         print(f"Computer:{result}")
         print("[You lose]")
-    continue
+        computer_score +=1
+
+
+    a = input("play again?(yes/no): ").lower()
+    if a == "yes":
+        continue
+    else:
+        print(f"SCORE: \nCOMPUTER:{computer_score} wins\nUSER:{score} wins")
+
+
+        print("BYE!!!")
+        quit()
 
 
 
